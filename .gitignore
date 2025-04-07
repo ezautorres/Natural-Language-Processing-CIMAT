@@ -21,6 +21,7 @@ assignments/assignment5/model_without_embeddings
 assignments/assignment6/word2vec_col.txt
 assignments/assignment6/es_train
 assignments/assignment6/es_val
+assignments/assignment6/trained_model
 
 # PRACTICES
 practices/practice_agresivity/OriginalAgresividad.ipynb
