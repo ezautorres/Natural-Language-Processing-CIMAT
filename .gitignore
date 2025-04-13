@@ -2,7 +2,8 @@
 ayudantias/
 bibliography/
 expositions/
-tests/
+tests/data/
+tests/OpinionesTripadvisor_nlp2023.xlsx
 
 # ASSIGNMENTS
 assignments/assignment1/pages
