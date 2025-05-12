@@ -5,6 +5,9 @@ expositions/
 tests/test1/data/
 tests/test1/OpinionesTripadvisor_nlp2023.xlsx
 tests/test2/data/
+tests/test2/Baseline_BoW_SVM.ipynb
+tests/test2/trained_model/
+tests/test2/predictions.csv
 
 # ASSIGNMENTS
 assignments/assignment1/pages
