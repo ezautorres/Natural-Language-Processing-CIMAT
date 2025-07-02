@@ -2,12 +2,7 @@
 ayudantias/
 bibliography/
 expositions/
-tests/test1/data/
-tests/test1/OpinionesTripadvisor_nlp2023.xlsx
-tests/test2/data/
-tests/test2/Baseline_BoW_SVM.ipynb
-tests/test2/trained_model/
-tests/test2/predictions.csv
+practices/
 
 # ASSIGNMENTS
 assignments/assignment1/pages
@@ -15,33 +10,36 @@ assignments/assignment1/stenographies
 assignments/assignment1/cleaned_stenographies
 assignments/assignment1/final_corpus
 
+assignments/assignment2/data/
+assignments/assignment3/data/
+
 assignments/assignment4/final_corpus
 assignments/assignment4/corpus_setences.txt
 assignments/assignment4/processed_corpus.txt
 
-assignments/assignment5/word2vec_col.txt
-assignments/assignment5/model_char
-assignments/assignment5/model_with_embeddings
-assignments/assignment5/model_without_embeddings
+assignments/assignment5/data/
+assignments/assignment5/model_char/
+assignments/assignment5/model_with_embeddings/
+assignments/assignment5/model_without_embeddings/
 
 assignments/assignment6/word2vec_col.txt
 assignments/assignment6/es_train
 assignments/assignment6/es_val
 assignments/assignment6/trained_model
-assignments/assignment6/double_task.ipynb
 
-# PRACTICES
-practices/practice_agresivity/OriginalAgresividad.ipynb
-practices/practice_agresivity/word2vec_col.txt
+# TESTS
+tests/test1/data/
+tests/test2/data/
+tests/test2/trained_model/
 
-practices/practice1/cleaned_stenographies
-practices/practice1/final_corpus
-practices/practice1/pages
-practices/practice1/stenographies
-practices/practice1/list_comprehension.ipynb
-practices/practice1/page_2.txt
-practices/practice1/conference_j.txt
-
-practices/practice6_NLM/model
-practices/practice6_NLM/best_model.pth
-practices/practice6_NLM/word2vec_col.txt
+# PROJECT
+project/ISSUES/assets/
+project/ISSUES/logs/
+project/ISSUES/pruebas/
+project/ISSUES/resources/
+project/ISSUES/src/
+project/ISSUES/wandb/
+project/ISSUES/requirements.txt
+project/ISSUES/README.md
+project/ISSUES/run_harmeme_text-inv-comb.sh
+project/ISSUES/run_hmc_text-inv-comb.sh
