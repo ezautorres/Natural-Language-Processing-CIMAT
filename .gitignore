@@ -5,27 +5,27 @@ expositions/
 practices/
 
 # ASSIGNMENTS
-assignments/assignment1/pages
-assignments/assignment1/stenographies
-assignments/assignment1/cleaned_stenographies
-assignments/assignment1/final_corpus
+assignment1/pages
+assignment1/stenographies
+assignment1/cleaned_stenographies
+assignment1/final_corpus
 
-assignments/assignment2/data/
-assignments/assignment3/data/
+assignment2/data/
+assignment3/data/
 
-assignments/assignment4/final_corpus
-assignments/assignment4/corpus_setences.txt
-assignments/assignment4/processed_corpus.txt
+assignment4/final_corpus
+assignment4/corpus_setences.txt
+assignment4/processed_corpus.txt
 
-assignments/assignment5/data/
-assignments/assignment5/model_char/
-assignments/assignment5/model_with_embeddings/
-assignments/assignment5/model_without_embeddings/
+assignment5/data/
+assignment5/model_char/
+assignment5/model_with_embeddings/
+assignment5/model_without_embeddings/
 
-assignments/assignment6/word2vec_col.txt
-assignments/assignment6/es_train
-assignments/assignment6/es_val
-assignments/assignment6/trained_model
+assignment6/word2vec_col.txt
+assignment6/es_train
+assignment6/es_val
+assignment6/trained_model
 
 # TESTS
 tests/test1/data/
