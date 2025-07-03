@@ -19,33 +19,39 @@ This repository contains all course assignments and the final project from the g
 
 ## Repository Structure
 
-Each assignment comprises the following elements:
+Each assignment includes:
 
-- a
-- a
-- a  
+- A single `.ipynb` notebook with code and commentary
+- Manually added visualizations or outputs within the notebook
+- Optional supporting files (e.g., pretrained embeddings, tokenizers) 
 
 ---
 
 ## Technical Stack
 
-This project was developed in Python 3.11 using:
+Developed and tested in Python 3.11, using the following tools across assignments:
 
-- **Core libraries:** `numpy`, `scipy`, `matplotlib`, `pandas`
-- **Symbolic computation:** `sympy`
-- **Statistical modeling & distributions:** `scipy.stats`
-- **Plotting & visualization:** `seaborn`, `matplotlib`
-- **Jupyter Notebooks** (for prototyping)
+- **NLP Libraries:** `nltk`, `spaCy`, `gensim`, `torchtext`
+- **Machine Learning & Deep Learning:** `scikit-learn`, `PyTorch`, `transformers`
+- **Text Processing:** `re`, `collections`, `TweetTokenizer`
+- **Pretrained Models:** `GloVe`, `Word2Vec`, `bert-base-multilingual-cased`, `PlanTL-GOB-ES/roberta-base-bne`, `pysentimiento/robertuito-base-uncased`, and `CLIP`
+-	**Visualization:** `matplotlib`, `seaborn`, `wordcloud`, `t-SNE`, `attention heatmaps`
+-	**Auxiliary:** `pandas`, `numpy`, `tqdm`, `xml.etree.ElementTree`
 
-> Note: Some assignments use pretrained embeddings like GloVe or Word2Vec. Others employ multilingual transformer models (e.g., bert-base-multilingual-cased or robertuito-base-bne).
+> Note: Most experiments are reproducible via notebook execution, with seeds set for deterministic behavior when possible.
 
 ---
 
 ## Datasets Used
 
-- hola
-- hola
-
+- **Presidential Press Conferences** (Scraped): Official transcripts from amlo.presidente.gob.mx and gob.mx used in Assignments 1 and 4
+- **MEX-A3T 2020 Subtask 1:** Spanish tweets for text classification tasks in Assignments 2–3 and 5
+- **PAN Author Profiling (CLEF 2017):** Multilingual tweet-based dataset used in Assignment 6 for nationality classification
+  - https://pan.webis.de/clef17/pan17-web/author-profiling.html
+- **Hateful Memes Challenge & HarMeme:** Used in the final project
+  - https://facebook.ai/hatefulmemes
+  - https://huggingface.co/datasets/harmeme
+ 
 ---
 
 ## Overview of Assignments
@@ -81,25 +87,53 @@ The following section presents a concise overview of each task, highlighting its
 ---
 
 ### Final Project – Multimodal Meme Classification with CLIP and Textual Inversion  
-  Implements the ISSUES framework for hateful meme classification by combining a frozen CLIP model with textual inversion techniques and a two-stage training strategy. The system disentangles visual and textual embeddings and fuses them via a Combiner network, achieving robust multimodal representations for classification.
+  Implements the `ISSUES` framework for hateful meme classification by combining a frozen `CLIP` model with textual inversion techniques and a two-stage training strategy. The system disentangles visual and textual embeddings and fuses them via a Combiner network, achieving robust multimodal representations for classification.
 
   <div align="center">
     <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/p.png" alt="Training" width="500"/>
   </div>
-  
+
+---
+
+## Tests
+
+### Test 1 - Tourist Opinion Mining and Text Analytics
+  Applies text preprocessing, exploratory analysis, and feature selection techniques to thousands of tourist reviews from 10 landmarks in Guanajuato. Includes sentiment classification based on rating scores, frequency-based word filtering, and `TF-IDF + Chi²` for identifying discriminative terms across destinations.
+
+  <div align="center">
+    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/t1.png" alt="Review Evolution" width="500"/>
+  </div>
+
+### Test 2 - Multitask Tweet Classification with RoBERTuito and TF-IDF
+  Implements a multitask neural pipeline for predicting both gender and nationality from Spanish-language tweets using RoBERTuito and TF-IDF features. The model is trained with joint loss, incorporates a Transformer-based encoder and sparse lexical features, and is evaluated using joint accuracy and F1 metrics across both tasks.
+
+  <div align="center">
+    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/t2.png" alt="Results" width="500"/>
+  </div>
+
 ---
 
 ## Learning Outcomes
 
-Throughout the course, I gained practical experience in:
+Through this course, I developed hands-on skills in:
 
-- Implementing numerical linear algebra algorithms from scratch
-- Performing polynomial and spline interpolation
-- Solving ordinary differential equations using numerical schemes
-- Designing and evaluating stochastic simulation pipelines (e.g., ARS, MCMC)
-- Analyzing convergence and stability in numerical methods
-- Applying Bayesian inference via MCMC techniques to real data
-- Writing clear scientific reports with integrated visualizations
+- Building text classification pipelines with custom tokenization and feature extraction
+- Training and evaluating classical models (Naive Bayes, SVMs) and neural models (BiGRU, Transformers, HAN)
+- Designing hierarchical and multitask neural networks for user profiling
+- Using attention mechanisms to interpret model behavior
+- Applying pretrained multilingual embeddings and fine-tuning transformer-based encoders
+- Implementing neural language models and evaluating them via perplexity and sentence likelihood
+- Combining vision-language models (CLIP) with textual inversion for multimodal classification
+- Writing reproducible research code and presenting results effectively with visualizations
+
+---
+
+## References
+
+- Giovanni Burbi, Alberto Baldrati, Lorenzo Agnolucci, Marco Bertini, Alberto Del Bimbo.  
+  *Mapping Memes to Words for Multimodal Hateful Meme Classification*.  
+  arXiv:2310.08368, 2023.  
+  https://arxiv.org/abs/2310.08368
 
 ---
 
