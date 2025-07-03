@@ -6,13 +6,26 @@
 **Institution:** CIMAT – Centro de Investigación en Matemáticas  
 **Term:** Spring 2025 
 
-This repository contains all course assignments and the final project from the graduate-level class *Natural Language Processing* at CIMAT (Spring 2025). The course covered core techniques in modern NLP, ranging from classical text preprocessing to deep learning-based models for text classification and sequence labeling. The final project involved building a hierarchical multitask model for social media user profiling using real-world Spanish-language data.
+This repository contains all course assignments and the final project from the graduate-level class *Natural Language Processing* at CIMAT (Spring 2025). The course covered core techniques in modern NLP, from classical text preprocessing to deep learning-based models for classification and sequence labeling. The final project involved building a hierarchical multitask model for social media user profiling using Spanish-language Twitter data.
 
 ## 📄 Table of Contents
 
-- [Repository Structure](#repository-structure)
-- [Technical Stack](#technical-stack)
-- [Overview of Assignments](#overview-of-assignments)
+- [Repository Structure](#repository-structure)  
+- [Technical Stack](#technical-stack)  
+- [Datasets Used](#datasets-used)  
+- [Overview of Assignments](#overview-of-assignments)  
+  - [Assignment 1 – Corpus Construction and Preprocessing](#assignment-1--corpus-construction-and-preprocessing)  
+  - [Assignment 2 – Basic Text Mining and SVM Classification](#assignment-2--basic-text-mining-and-svm-classification)  
+  - [Assignment 3 – Feature Selection and Text Visualization](#assignment-3--feature-selection-and-text-visualization)  
+  - [Assignment 4 – Language Modeling from Political Speeches](#assignment-4--language-modeling-from-political-speeches)  
+  - [Assignment 5 – Neural Language Modeling](#assignment-5--neural-language-modeling)  
+  - [Assignment 6 – Hierarchical Attention Network](#assignment-6--hierarchical-attention-network)  
+  - [Final Project – Multimodal Meme Classification with CLIP and Textual Inversion](#final-project--multimodal-meme-classification-with-clip-and-textual-inversion)  
+- [Tests](#tests)  
+  - [Test 1 – Tourist Opinion Mining and Text Analytics](#test-1---tourist-opinion-mining-and-text-analytics)  
+  - [Test 2 – Multitask Tweet Classification with RoBERTuito and TF-IDF](#test-2---multitask-tweet-classification-with-robertuito-and-tf-idf)  
+- [Learning Outcomes](#learning-outcomes)  
+- [References](#references)  
 - [Contact](#-contact)
 
 ---
@@ -29,16 +42,17 @@ Each assignment includes:
 
 ## Technical Stack
 
-Developed and tested in Python 3.11, using the following tools across assignments:
+Developed and tested in Python 3.11, using the following tools across assignments and tests:
 
-- **NLP Libraries:** `nltk`, `spaCy`, `gensim`, `torchtext`
-- **Machine Learning & Deep Learning:** `scikit-learn`, `PyTorch`, `transformers`
-- **Text Processing:** `re`, `collections`, `TweetTokenizer`
-- **Pretrained Models:** `GloVe`, `Word2Vec`, `bert-base-multilingual-cased`, `PlanTL-GOB-ES/roberta-base-bne`, `pysentimiento/robertuito-base-uncased`, and `CLIP`
--	**Visualization:** `matplotlib`, `seaborn`, `wordcloud`, `t-SNE`, `attention heatmaps`
--	**Auxiliary:** `pandas`, `numpy`, `tqdm`, `xml.etree.ElementTree`
+- **NLP Libraries:** `nltk`, `spaCy`, `gensim`, `torchtext`, `pysentimiento`
+- **Machine Learning & Deep Learning:** `scikit-learn`, `PyTorch`, `transformers`, `lightning`
+- **Text Processing:** `re`, `collections`, `TweetTokenizer`, `emoji`, `ftfy`
+- **Pretrained Models:** `GloVe`, `Word2Vec`, `bert-base-multilingual-cased`, `PlanTL-GOB-ES/roberta-base-bne`, `pysentimiento/robertuito-base-uncased`, `CLIP`
+-	**Visualization:** `matplotlib`, `seaborn`, `wordcloud`, `t-SNE`, `attention heatmaps`, `confusion_matrix`, `word frequency histograms`
+-	**Auxiliary:** `argparse`, `glob`, `json`, `numpy`, `os`, `pandas`, `random`, `scipy`, `tqdm`, `xml.etree.ElementTree`
+- **Environment:** `Jupyter Notebook` (for interactive development)
 
-> Note: Most experiments are reproducible via notebook execution, with seeds set for deterministic behavior when possible.
+> Note: Most notebooks are self-contained and reproducible, with controlled randomness when applicable.
 
 ---
 
@@ -62,7 +76,7 @@ The following section presents a concise overview of each task, highlighting its
   Automates the creation of a text corpus from presidential press conferences through web scraping and HTML parsing with `wget` and `BeautifulSoup`. The resulting plain-text files serve as a foundation for later NLP tasks and include basic error handling during extraction.
 
   <div align="center">
-    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/a1.png" alt="Frequency of words" width="500"/>
+    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/a1.png" alt="Frequency of words" width="600"/>
   </div>
 
 ### Assignment 2 – Basic Text Mining and SVM Classification
@@ -81,16 +95,16 @@ The following section presents a concise overview of each task, highlighting its
   Trains a hierarchical neural model with word- and tweet-level attention mechanisms for user profiling based on multilingual tweet sequences. Evaluates model performance using F1-score and interprets attention weights for qualitative analysis.
 
   <div align="center">
-    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/a6.png" alt="Training" width="500"/>
+    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/a6.png" alt="Training" width="800"/>
   </div>
 
 ---
 
 ### Final Project – Multimodal Meme Classification with CLIP and Textual Inversion  
-  Implements the `ISSUES` framework for hateful meme classification by combining a frozen `CLIP` model with textual inversion techniques and a two-stage training strategy. The system disentangles visual and textual embeddings and fuses them via a Combiner network, achieving robust multimodal representations for classification.
+  Implements the [ISSUES framework](https://arxiv.org/abs/2310.08368) for hateful meme classification by combining a frozen `CLIP` model with textual inversion techniques and a two-stage training strategy. The system disentangles visual and textual embeddings and fuses them via a Combiner network, achieving robust multimodal representations for classification.
 
   <div align="center">
-    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/p.png" alt="Training" width="500"/>
+    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/p.png" alt="Training" width="600"/>
   </div>
 
 ---
@@ -101,14 +115,14 @@ The following section presents a concise overview of each task, highlighting its
   Applies text preprocessing, exploratory analysis, and feature selection techniques to thousands of tourist reviews from 10 landmarks in Guanajuato. Includes sentiment classification based on rating scores, frequency-based word filtering, and `TF-IDF + Chi²` for identifying discriminative terms across destinations.
 
   <div align="center">
-    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/t1.png" alt="Review Evolution" width="500"/>
+    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/t1.png" alt="Review Evolution" width="600"/>
   </div>
 
 ### Test 2 - Multitask Tweet Classification with RoBERTuito and TF-IDF
   Implements a multitask neural pipeline for predicting both gender and nationality from Spanish-language tweets using RoBERTuito and TF-IDF features. The model is trained with joint loss, incorporates a Transformer-based encoder and sparse lexical features, and is evaluated using joint accuracy and F1 metrics across both tasks.
 
   <div align="center">
-    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/t2.png" alt="Results" width="500"/>
+    <img src="https://github.com/ezautorres/Natural-Language-Processing-CIMAT/blob/main/images/t2.png" alt="Results" width="800"/>
   </div>
 
 ---
@@ -117,7 +131,7 @@ The following section presents a concise overview of each task, highlighting its
 
 Through this course, I developed hands-on skills in:
 
-- Building text classification pipelines with custom tokenization and feature extraction
+- Constructing text classification pipelines with custom tokenization and feature extraction
 - Training and evaluating classical models (Naive Bayes, SVMs) and neural models (BiGRU, Transformers, HAN)
 - Designing hierarchical and multitask neural networks for user profiling
 - Using attention mechanisms to interpret model behavior
