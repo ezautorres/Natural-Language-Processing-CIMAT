@@ -1,5 +1,12 @@
 # Natural Language Processing – CIMAT (Spring 2025)
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![PyTorch](https://img.shields.io/badge/PyTorch-✓-ee4c2c)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-✓-ff6f00)
+![Neural Networks](https://img.shields.io/badge/Neural%20Networks-✓-hotpink)
+![Transformers](https://img.shields.io/badge/Transformers-✓-mediumvioletred)
+
 **Author:** Ezau Faridh Torres Torres  
 **Advisor:** Dr. Adrian Pastor López Monroy and Dr. Fernando Sanchez Vega  
 **Course:** Natural Language Processing  
